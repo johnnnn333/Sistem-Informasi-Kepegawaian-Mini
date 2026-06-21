@@ -1,0 +1,14 @@
+# .htaccess
+# Lindungi folder-folder yang tidak boleh diakses langsung dari browser
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Blokir akses langsung ke file .sql, .log, .env
+<FilesMatch "\.(sql|log|env|md)$">
+    Require all denied
+</FilesMatch>
+
+# Blokir listing folder
+Options -Indexes

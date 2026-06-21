@@ -1,0 +1,24 @@
+# .gitignore — SIMPEG Mini
+
+# Tool sementara generate hash — JANGAN pernah di-push
+_generate_hash.php
+
+# Folder runtime (log & file upload user, biasanya kosong di repo)
+logs/*
+!logs/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# File konfigurasi lokal (kalau nanti kamu pisah config sensitif)
+config/database.local.php
+.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependency folder (kalau nanti pakai composer/npm)
+vendor/
+node_modules/
